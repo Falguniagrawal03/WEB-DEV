@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover</title>
+    <style>
+        .card{
+            height: auto;
+            width: auto;
+            border: 2px solid black;
+            display: inline-block;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px black;
+            transition: 1s;
+        }
+        .desc{
+            padding: 0px 2px 0px 8px;
+        }
+        img{
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .card:hover{
+            box-shadow: 0 8px 16px goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="men.jpeg" alt="men"/>
+        <div class="desc">
+            <h3>Ravi Kumar</h3>
+            <p>Software Engineer</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1ZAMw2XkttJYi3cOhggQjkn1XnBgxoFOrA&s" alt="women"/>
+        <div class="desc">
+            <h3>Riya Mishra</h3>
+            <p>Data Analyst</p>
+        </div>
+    </div>
+</body>
+</html>
