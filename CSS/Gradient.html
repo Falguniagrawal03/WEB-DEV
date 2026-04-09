@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main div{
+            height:150px;
+            width:150px;
+            display: inline-block; 
+            gap: 20px;
+            border: 2px solid black;        
+        } 
+        #box1{
+            background: linear-gradient(red, yellow, orange);
+        }
+        #box2{
+            background: linear-gradient(to right, pink,lightblue, lightgreen);
+        }
+        #box3{
+            background: linear-gradient(45deg,red, yellow, green);
+        }
+        #box4{
+            background: linear-gradient(to right, red 10%, green 60%, blue 90%);
+        }
+        #box5{
+            background: linear-gradient(to right, pink 50%, purple 50%)
+        }
+        #box6{
+            background: linear-gradient(45deg, red 0px, red 20px, blue 20px, blue 40px);
+        }
+
+        #main2 div{
+            height:150px;
+            width:150px;
+            display: inline-block;
+            border: 2px solid black;
+            gap: 20px;
+        }
+        #box7{
+            background: radial-gradient(circle, pink, blue);
+        }
+        #box8{
+            background: radial-gradient(ellipse, orange, green);
+        }
+        #box9{
+            background: radial-gradient(circle at top left, pink, rgb(217, 255, 0));
+        }
+        #box10{
+            background: radial-gradient(circle closest-side, brown, black);
+        }
+        #box11{
+            background: radial-gradient(circle, pink 35%, rgb(0, 255, 4) 50%, yellow 70%);
+        }
+        #box12{
+            background: repeating-radial-gradient(circle, red 0px, red 10px, blue 20px, blue 20px);   
+        }
+
+        #main3 div{
+            height:150px;
+            width:150px;
+            display: inline-block;
+            border: 2px solid black;
+            gap: 20px;
+        }
+        #box13{
+            background: conic-gradient(red, blue, yellow, green);
+        }
+        #box14{
+            background: conic-gradient(from 90deg, red, blue, yellow, green);
+        }
+        #box15{
+            background: conic-gradient(from 45deg at center,red, blue, yellow, green);
+        }
+        #box16{
+            background: conic-gradient(red 0% 30%, yellow 30% 60%, green 60% 100%);
+        }
+        #box17{
+            background: conic-gradient(red 0deg 120deg, yellow 120deg 240deg, green 240deg 360deg);
+        }
+        #box18{
+            background: repeating-conic-gradient(red 0deg 10deg,  green 10deg 20deg);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Linear Gradient</h1>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+    </div>
+
+    <div id="main2">
+        <h1>Radial Gradient</h1>
+        <div id="box7"></div>
+        <div id="box8"></div>
+        <div id="box9"></div>
+        <div id="box10"></div>
+        <div id="box11"></div>
+        <div id="box12"></div>
+    </div>
+
+    <div id="main3">
+        <h1>Conic Gradient</h1>
+        <div id="box13"></div>
+        <div id="box14"></div>
+        <div id="box15"></div>
+        <div id="box16"></div>
+        <div id="box17"></div>
+        <div id="box18"></div>
+    </div>
+</body>
+</html>
