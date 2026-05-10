@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            height:400px;
+            width:400px;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px;
+            gap: 50px;
+            margin: 0% auto;
+            margin-top: 70px;
+            
+        }
+        img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+            border-radius: 50px;
+        }
+        #main div{
+            overflow: hidden;
+            position:relative;
+        }
+        #main div:hover img{
+            transform: scale(2);
+            filter: brightness(50%);
+        }
+        #one{
+            grid-row: 2/3;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="one"> <img src="https://images.unsplash.com/photo-1770215962687-93b6b860add7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"/></div>
+        <div id="two"> <img src="https://images.unsplash.com/photo-1771317778033-3473a576c5e9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"/></div>
+        <div id="three"> <img src="https://images.unsplash.com/photo-1771317778033-3473a576c5e9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"/></div>
+        <div id="four"> <img src="https://images.unsplash.com/photo-1770936997277-1c5732085160?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"/></div>
+        <div id="five"> <img src="https://images.unsplash.com/photo-1771100732977-42037a634932?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D"/></div>
+        <div id="six"> <img src="https://images.unsplash.com/photo-1771204474488-7dd5e434e6c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D"/></div>
+
+    </div>
+</body>
+</html>
