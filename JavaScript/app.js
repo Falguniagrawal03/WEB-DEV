@@ -49,3 +49,35 @@ console.log(5==='5'); //false bcz checks both type and value
 //Comparison for non-numbers
 console.log('a'<'A');  //false
 console.log('a'>'A');  //true
+
+//Conditional Statements
+///if 
+console.log("before my if statement");
+let Age=23;
+if(Age>=18){
+    console.log("You can vote!");
+    console.log("YOu can drive!");
+}
+if(Age<18){
+    console.log("You cannot vote!")
+}
+console.log("after my if statement");
+
+///
+let firstName = "naman";
+if(firstName=="naman"){
+    console.log(`welcome ${firstName}`);
+}
+
+//Question(Traffic Light)
+let color = "red";
+
+if(color === "red"){
+    console.log("Stop!");
+}
+if(color === "yellow"){
+    console.log("Ready");
+}
+if(color === "green"){
+    console.log("Go");
+}
