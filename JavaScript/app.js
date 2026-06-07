@@ -216,3 +216,57 @@ switch (Color)
     default:
         console.log("Traffic light is broken");
 }
+
+///Question(Days)
+let days = 1;
+switch (days)
+{
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+}
+
+
+//Alert and Prompts
+alert("something is wrong")
+console.error("this is an error msg");
+console.warn("this is a warning msg");
+
+let fName = prompt("Enter your first name");
+let lName = prompt("Enter your last name");
+console.log("welcome" , fName , lName , "!")
+
+
+//Assigment Questions
+///Q1
+let num = 50;
+if(num % 10 == 0){
+    console.log("Good")
+}
+else{
+    console.log("Bad")
+}
+
+///Q2
+let Name = prompt("Enter your name:");
+let Agee = prompt("Enter your age:");
+let msg = (`name ${Name} and age is ${Agee}`)
+alert(msg);
