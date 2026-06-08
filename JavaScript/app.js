@@ -254,7 +254,6 @@ let fName = prompt("Enter your first name");
 let lName = prompt("Enter your last name");
 console.log("welcome" , fName , lName , "!")
 
-
 //Assigment Questions
 ///Q1
 let num = 50;
@@ -270,3 +269,78 @@ let Name = prompt("Enter your name:");
 let Agee = prompt("Enter your age:");
 let msg = (`name ${Name} and age is ${Agee}`)
 alert(msg);
+
+///Q3
+let Quarter = 1;
+switch (Quarter)
+{
+    case 1:
+        console.log("January, February, March");
+        break;
+    case 2:
+        console.log("April, May, June");
+        break;
+    case 3:
+        console.log("July, August, September");
+        break;
+    case 4:
+        console.log("October, November, December");
+        break;
+    default:
+        console.log("NOT A QUARTER!")
+
+}
+
+///Q4
+let Str = "apple";
+if((Str[0]=='a'|| Str[0]=='A') && (Str.length > 5)){
+    console.log("Golden String");
+}
+else{
+    console.log("Not a golden string");
+}
+
+///Q5
+let x=5;
+let y=7;
+let z=9;
+if(x>y){
+    console.log("x is greater");
+}
+else if (y>z){
+    console.log("y is greater")
+}
+else{
+    console.log("z is greater");
+}
+//OR
+let X=5;
+let Y=10;
+let Z=9;
+if(X>Y)
+{
+    if(X>Z){
+        console.log("X is greatest")
+    }
+    else{
+        console.log("Z is greatest");
+    }
+}
+else{
+    if(Y>Z){
+        console.log("Y is greatest");
+    }
+    else{
+        console.log("Z is greatest");
+    }
+}
+
+///Q6
+let num1=32;
+let num2=47852;
+if((num1%10) == (num2%10)){
+    console.log("last digit is same");
+}
+else{
+    console.log("last digit is not same");
+}
