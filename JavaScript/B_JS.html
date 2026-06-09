@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        ///Trim Method
+        let msg = "  Hello  ";
+        console.log(msg.trim());
+
+        ///String Methods
+        let str = "Random String";
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        ///String Methods with Arguments {IndexOf}
+        let text = "ILoveCoding";
+        console.log(text.indexOf("Love"));
+        console.log(text.indexOf("K"));
+        console.log(text.indexOf("o"));
+
+        ///Method Chaining
+        let msg1 = "  Hello  ";
+        console.log(msg1.toUpperCase().trim())
+
+        ///Slice Method
+        let str1 = "ILoveCoding";
+        console.log(str1.slice(5));
+        console.log(str1.slice(1,5));
+        console.log(str1.slice(0, str1.length));
+        console.log(str1.slice(-1));
+
+        ///Replace & Repeat Method
+        let txt = "I Love Coding";
+        console.log(txt.replace("Love", "Do"));
+        console.log(txt.replace("o", "x"));
+
+        let fruit = "Mango";
+        console.log(fruit.repeat(3));
+
+        ///Practice Qs:
+        //Q1
+        let msgg = "  Help!";
+        console.log(msgg.trim().toUpperCase());
+        //Q2
+        let name = "Apnacollege";
+        console.log(name.slice(4,9));
+        console.log(name.indexOf("na"));
+        console.log(name.replace("Apna", "Our"));
+        //Q3 Separate college from string and replace l with t
+        console.log(name.slice(4).replace("l", "t").replace("l", "t"));
+
+    </script>
+</head>
+<body>
+    <h1>Hello Javascript</h1>
+</body>
+</html>
