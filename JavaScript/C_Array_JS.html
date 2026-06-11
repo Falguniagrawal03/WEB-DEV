@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        
         ///Array
         let students = ["aman", "bhavesh", "suraj"];
         console.log(students);
@@ -25,12 +26,12 @@
         console.log(info[0].length);
         console.log(info.length);
 
-        let empArr = [];    //empty array
+        let empArr = [];    //empty array {0}
         console.log(empArr[0]);
         console.log(empArr.length);
         console.log([].length);
 
-        ///Arrays are Mutable
+        ///Arrays are Mutable {changes in original array}
         let fruits = ['mango', 'apple', 'litchi'];
         fruits[0] = 'banana';
         console.log(fruits);
@@ -60,3 +61,51 @@
         months.unshift('june');
         months.unshift('july');
         console.log(months);
+
+        ///indexOf {returns index of something} and includes {search for a value} Method
+        let primary = ['red', 'yellow', 'blue'];
+        console.log(primary.indexOf('yellow'));  //1
+        console.log(primary.indexOf('green'));   //-1 (not found)
+
+        console.log(primary.includes('red'));    //true
+        console.log(primary.includes('green'));  //false
+
+        ///Concatenation {concat: merge 2 arrays} and Reverse {reverse an array} Method
+        let secondary = ['orange', 'pink', 'white'];
+        console.log(primary.concat(secondary));
+        console.log(secondary.concat(primary));
+
+        console.log(primary.reverse());
+        console.log(primary.concat(secondary).reverse());
+        console.log(secondary.reverse());
+
+        ///Slice Method  {copies a portion of an array}
+        let colors = ['red', 'yellow', 'blue', 'orange', 'pink', 'white'];
+        console.log(colors.slice());
+        console.log(colors.slice(2));
+        console.log(colors.slice(2,3));
+        console.log(colors.slice(-2));
+
+        ///Splice {removes/replaces/add elements in place} {splice(start, deleteCount, item0...itemN)}
+        console.log(colors.splice());
+        console.log(colors.splice(4));
+        console.log(colors);                                    //[red, yellow, blue, orange]
+        console.log(colors.splice(0,1));   
+        console.log(colors);                                    //[ yellow, blue, orange]
+        console.log(colors.splice(0,1, 'black', 'grey'));       
+        console.log(colors);                                    //[black, grey, blue, orange]
+
+        ///Practice Q1
+        let month = ['jan', 'july', 'march', 'aug'];
+        console.log(month.splice(0,2,'july', 'june'));
+        console.log(month);
+        ///Q2
+        let lang = ['c', 'c++', 'html', 'JS', 'python', 'java', 'c#', 'sql'];
+        console.log(lang.reverse().indexOf('JS'));
+        
+    </script>
+</head>
+<body>
+    <h1>ARRAYS</h1>
+</body>
+</html> 
