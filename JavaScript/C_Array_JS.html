@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+
         ///Array
         let students = ["aman", "bhavesh", "suraj"];
         console.log(students);
@@ -102,6 +103,41 @@
         ///Q2
         let lang = ['c', 'c++', 'html', 'JS', 'python', 'java', 'c#', 'sql'];
         console.log(lang.reverse().indexOf('JS'));
+
+        ///Sort {sorts an array}
+        let days = ['mon', 'sun', 'wed', 'tues'];
+        console.log(days.sort());
+        let sqs = [25, 16, 4, 49, 36, 9];
+        console.log(sqs.sort());
+
+        ///Array References {addresses in memory}
+        console.log("name"==="name");       //true(str me OK)
+        console.log([]==[]);                //false(arr me not OK)
+        let arr = ['a', 'b'];
+        let arrCopy = arr;
+        console.log(arrCopy);
+        arrCopy.push('c');
+        console.log(arr);
+        console.log(arrCopy);
+        console.log(arr==arrCopy);
+
+        ///Constant Array
+        const Arr = [1,2,3,4];
+        Arr.push(5);
+        console.log(Arr);
+        Arr.pop();
+        console.log(Arr);
+        // Arr = [1,2,3]       (Error)
+        
+        ///Nested Array {multi-dimensional ... array of arrays}
+        let n = [[2,4], [3,6], [4,8]];
+        console.log(n);
+         
+        ///Practice Qs {nested tic-tac-toe}
+        let game = [['X',null,'O'], [null,'X',null], ['O',null,'X']];
+        console.log(game);
+        game[0][1]= 'O';
+        console.log(game);
         
     </script>
 </head>
