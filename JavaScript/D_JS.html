@@ -9,26 +9,114 @@
         for (let i=1; i<=5; i++){
             console.log(i);         //output(12345)
         }
+        console.log("------------------------------------")
         //backward
         for (let i=5; i>=1; i--){ 
             console.log(i);         //output(54321)
         }
+        console.log("------------------------------------")
         //Odd No.
-        for (let i=1; i<=15; i++){      //OR  for (let i=1; i<=15; i=i+2) {1,3,5,7,9,11,13,15}
-            if(i%2!=0){                 //OR  for (let i=15; i>=1; i=i-2) {15,13,11,9,7,5,3,1}
+        for (let i=1; i<=15; i++){      // for (let i=1; i<=15; i=i+2) {1,3,5,7,9,11,13,15}
+            if(i%2!=0){                 // for (let i=15; i>=1; i=i-2) {15,13,11,9,7,5,3,1}
                 console.log(i);
             }
         }
+        console.log("------------------------------------")
         //Even no.
-        for (let i=1; i<=10; i++){      //OR  for (let i=2; i<=10; i=i+2) {2,4,6,8,10}
-            if(i%2==0){                 //OR  for (let i=10; i>=2; i=i-2) {10,8,6,4,2}
+        for (let i=1; i<=10; i++){      // for (let i=2; i<=10; i=i+2) {2,4,6,8,10}
+            if(i%2==0){                 // for (let i=10; i>=2; i=i-2) {10,8,6,4,2}
                 console.log(i);
             }
         }
+        console.log("------------------------------------")
+        
+        //Infinite Loops
+        // for (let i=1; i>=0; i++){
+        //     console.log(i);            //Will run infinitely 
+        // }
+        // for (let i=1; ; i++ ){
+        //     console.log(i);
+        // }
+
+        //Multiplication table for 5
+        for (let i=5; i<=50; i=i+5){
+            console.log(i);
+        }
+        console.log("------------------------------------")
+
+        ///Nested Loops
+        for (let i=1; i<=3; i++){                //--> outer loop
+            console.log(`outer loop i=${i}`);
+            for (let j=1; j<=3; j++){            //--> inner loop
+                console.log(j)
+            }
+        } 
+        console.log("------------------------------------")
+
+        ///While Loop
+        let i=1;                     
+        while(i<=5){
+            console.log(i);
+            i++;
+        }
+        console.log("------------------------------------")
+        let a=5;                     
+        while(a>=1){
+            console.log(a);
+            a--;
+        }
+        console.log("------------------------------------")
+
+        ///Fav Movie
+        const favMovie = "Dhurandar";
+
+        let guess = prompt("Guess my favourite movie");
+        while((guess!= favMovie) && (guess!= "quit")){
+            console.log("Wrong Guess");
+            guess = prompt("Wrong Guess! pls try again");
+        }
+        if(guess==favMovie){
+            console.log("Right,Congrats!");
+            console.log("------------------------------------")
+        }
+        else{
+            console.log("U Quit")
+        }
+        console.log("------------------------------------")
+
+        ///Break Keyword
+        let j =  1;
+        while(j<=5){
+            if(j==3){
+                break;
+            }
+            console.log(j);
+            j++;
+        }
+        console.log("we used break at 3");
+        console.log("------------------------------------")
+
+        ///Fav Movie using break Keyword
+        // const favMovie1 = "Dhurandar";
+
+        // let guess1 = prompt("Guess my favourite movie");
+        // while(guess1!= favMovie1){
+        //     if(guess1 == "quit"){
+        //         console.log("U Quit")
+        //         break;
+        //     }
+        //     console.log("Wrong Guess");
+        //     guess1 = prompt("Wrong Guess! pls try again")
+        // }
+        // if(guess1==favMovie1){
+        //     console.log("Right,Congrats!");
+        // }
+        // console.log("------------------------------------")
 
     </script>
 </head>
 <body>
     <h1>LOOPS<h1>
+
 </body>
 </html>
