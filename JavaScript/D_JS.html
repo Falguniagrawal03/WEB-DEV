@@ -29,7 +29,6 @@
             }
         }
         console.log("------------------------------------")
-        
         //Infinite Loops
         // for (let i=1; i>=0; i++){
         //     console.log(i);            //Will run infinitely 
@@ -113,10 +112,58 @@
         // }
         // console.log("------------------------------------")
 
+        ///Loops with Arrays
+        let fruits = ['mango', 'banana', 'apple', 'litchi', 'orange'];
+        fruits.push('pineapple');
+        for(let i=0; i<fruits.length; i++){
+            console.log(i, fruits[i]);
+        }
+        //Backward(Reverse)
+        console.log("------------------------------------")
+        for(let j=fruits.length-1; j>=0; j--){
+            console.log(j, fruits[j]);
+        }
+        console.log("------------------------------------")
+
+        ///Nested Loops with Nested Arrays
+        let heroes = [['ironman', 'spiderman', 'thor'], ['superman', 'wonder women', 'flash']];
+        for(let i=0; i<heroes.length; i++){
+            console.log(i, heroes[i]);
+            for(let j=0; j<heroes[i].length; j++){
+                console.log(`j: ${j}, ${heroes[i][j]}`)
+            }
+        }
+        console.log("------------------------------------")
+        //Another example
+        let student = [['aman', 95], ['shree', 85], ['ved', 80]];
+        for(let i=0; i<student.length; i++){
+            console.log(`info of student: ${i}`);
+            for(let j=0; j<student[i].length; j++){
+                console.log(student[i][j]);
+            }
+        }
+        console.log("------------------------------------")
+
+        ///for - 0f Loop
+        let fruitss = ['mango', 'banana', 'apple', 'litchi', 'orange'];
+        for(fruit of fruitss){
+            console.log(fruit);
+        }
+        for(char of 'apnacollege'){
+            console.log(char);
+        }
+
+        ///Nested for - of Loop
+        let heros = [['ironman', 'spiderman', 'thor'], ['superman', 'wonder women', 'flash']];
+        for(list of heros){
+            for(name of list){
+                console.log(name);
+            }
+        }
+
     </script>
 </head>
 <body>
     <h1>LOOPS<h1>
-
 </body>
 </html>
