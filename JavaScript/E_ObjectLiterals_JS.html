@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //Object Literals
+        let student = {
+            name: "avni",
+            age: 21
+        };
+        console.log(student);
+        console.log("------------------------------------")
+
+        //Another Ex
+        const item ={
+            price: 100,
+            discount: 20,
+            color: ['pink', 'blue']
+        };
+        console.log(item);
+        console.log("------------------------------------")
+
+        //Creating a Twitter post/threas(another ex)
+        const post = {
+            username: "@falguni",
+            content: "This is my #firstpost",
+            likes: 150,
+            comments: 50,
+            reposts: 5,
+            tags: ['@panacollege', 'delta']
+        };
+        console.log(post);
+        console.log("------------------------------------")
+
+        //Get values
+        console.log(post['content']);
+        //Or
+        console.log(post.username);
+        console.log(post.tags[0]);
+        console.log("------------------------------------")
+
+        //Conversion of get values
+        const obj ={
+            1: 'a',
+            2: 'b',
+            true: 'c',
+            null: 'd',
+            undefined: 'e'
+        };
+        console.log(obj);
+        console.log("---------------Check Output by giving in console---------------------")
+
+        //Add/Update/Delete value
+        const stud ={
+            name: "Shree",
+            age: 23,
+            marks: 94.4,
+            city: 'Delhi'
+        };
+        console.log(stud);
+        stud.city = 'Mumbai';
+        console.log(stud);
+        stud.gender = 'Female';
+        console.log(stud);
+        stud.marks = 'A';
+        console.log(stud);
+        delete stud.marks;
+        console.log(stud);
+        console.log("------------------------------------")
+
+        //Nested Object (Object of Objects)
+        const classInfo ={
+            aman:{
+                grade : 'A',
+                city: 'Delhi'
+            },
+            anya:{
+                grade : 'B',
+                city: 'Mumbai'
+            },
+            shiv:{
+                grade : 'A',
+                city: 'Jabalpur'
+            }
+        };
+        console.log(classInfo);
+        console.log(classInfo.aman);
+        console.log(classInfo.shiv.city);
+
+        //Array of Objects
+        const classInfor =[
+            {
+                name: 'shivay',
+                city: 'Delhi',
+                grade: 'A+'
+            },
+            {
+                name: 'om',
+                city: 'Jaipur',
+                grade: 'A'
+            },
+            {
+                name: 'rudra',
+                city: 'Kanpur',
+                grade: 'B+'
+            },
+        ];
+        console.log(classInfor);
+        console.log(classInfor[0]);
+        console.log(classInfor[1].name);
+        console.log(classInfor[2].gender = 'Male');
+        console.log(classInfor[2]);
+        
+    </script>
+</head>
+<body>
+    Object Literals
+</body>
+</html>
