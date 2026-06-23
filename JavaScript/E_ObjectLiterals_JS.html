@@ -6,7 +6,7 @@
     <title>Document</title>
     <script>
 
-        //Object Literals
+        ///Object Literals
         let student = {
             name: "avni",
             age: 21
@@ -14,7 +14,7 @@
         console.log(student);
         console.log("------------------------------------")
 
-        //Another Ex
+        ///Another Ex
         const item ={
             price: 100,
             discount: 20,
@@ -23,7 +23,7 @@
         console.log(item);
         console.log("------------------------------------")
 
-        //Creating a Twitter post/threas(another ex)
+        ///Creating a Twitter post/threas(another ex)
         const post = {
             username: "@falguni",
             content: "This is my #firstpost",
@@ -35,14 +35,14 @@
         console.log(post);
         console.log("------------------------------------")
 
-        //Get values
+        ///Get values
         console.log(post['content']);
         //Or
         console.log(post.username);
         console.log(post.tags[0]);
         console.log("------------------------------------")
 
-        //Conversion of get values
+        ///Conversion of get values
         const obj ={
             1: 'a',
             2: 'b',
@@ -53,7 +53,7 @@
         console.log(obj);
         console.log("---------------Check Output by giving in console---------------------")
 
-        //Add/Update/Delete value
+        ///Add/Update/Delete value
         const stud ={
             name: "Shree",
             age: 23,
@@ -71,7 +71,7 @@
         console.log(stud);
         console.log("------------------------------------")
 
-        //Nested Object (Object of Objects)
+        ///Nested Object (Object of Objects)
         const classInfo ={
             aman:{
                 grade : 'A',
@@ -91,7 +91,7 @@
         console.log(classInfo.shiv.city);
         console.log("------------------------------------")
 
-        //Array of Objects
+        ///Array of Objects
         const classInfor =[
             {
                 name: 'shivay',
@@ -116,7 +116,7 @@
         console.log(classInfor[2]);
         console.log("------------------------------------")
 
-        //Math Object
+        ///Math Object
         console.log(Math);
         console.log(Math.PI);               //3.1415926
         console.log(Math.E);                //2.7182818
@@ -127,8 +127,32 @@
         console.log(Math.ceil(6.5));        //(7) will return the nearest largest integer value
         console.log(Math.random())          // generates random values btw 0 to 1
         console.log("------------------------------------")
-        
-        
+
+        ///Math.Random Integers
+        console.log(step1 = Math.random());     //gives a random value
+        console.log(step2 = step1 * 10);        //for converting it into a one decimal point number(multiply)
+        console.log(step3 = Math.floor(step2)); //this will give the nearest smallest whole integer value
+        console.log(step4 = step3 + 1);         //a simple addition
+        console.log("------------------STEPS------------------")
+
+        console.log(num = Math.floor(Math.random()*10));          //With this we'll always get a number btw 0 to 9
+        console.log("------------------BTW 0 TO 9------------------")
+        console.log(num = Math.floor(Math.random()*10) + 1);      //With this we'll always get a number btw 1 to 10
+        console.log("------------------BTW 1 TO 10------------------")
+
+        console.log(num = Math.floor(Math.random()*100));         //With this we'll always get a number btw 0 to 99
+        console.log("------------------BTW 0 TO 99------------------")
+        console.log(num = Math.floor(Math.random()*100) + 1);     //With this we'll always get a number btw 1 to 100
+        console.log("-------------------BTW 1 TO 100-----------------")
+
+        console.log(num = Math.floor(Math.random()*5) + 1);      //With this we'll always get a number btw 1 to 5
+        console.log("-------------------BTW 1 TO 5-----------------")
+
+        console.log(num = Math.floor(Math.random()*5) + 21);      //With this we'll always get a number btw 21 to 25
+        console.log("-------------------BTW 21 TO 25-----------------")
+
+        console.log("------------------------------------")
+
     </script>
 </head>
 <body>
