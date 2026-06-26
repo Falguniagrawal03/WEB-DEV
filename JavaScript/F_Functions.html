@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        ///Functions
+        function hello(){                //--> function definition(function funcName(){})
+            console.log('hello');
+        }
+        hello();                         //--> function calling(funcName();)
+        console.log("------------------------------------")
+        //function using loop
+        function print1to5(){
+            for(let i=1; i<=5; i++){
+                console.log(i);
+            }
+        }
+        print1to5();
+        console.log("------------------------------------")
+        //function using if else
+        function isAdult(){
+            let age = 18;
+            if(age>=18){
+                console.log("adult");
+            }
+            else{
+                console.log("is not an adult");
+            }
+        }
+        isAdult();
+        console.log("------------------------------------")
+
+        ///Practice Qs
+        //Q1 {write a poem}
+        function poem(){
+            console.log("Twinkle Twinkle Little Star");
+            console.log("How I wonder what you are");
+        }
+        poem();
+        console.log("------------------------------------")
+
+        //Q2 {write a func to roll a dice &always display the value of dice(1 to 6)}
+        function rollDice(){
+            rand = Math.floor(Math.random() * 6 + 1);
+            console.log(rand);
+        }
+        rollDice();
+        rollDice();
+        console.log("------------------------------------")
+
+        ///Functions with Arguments
+        function printName(name, age){
+            console.log(`${name}'s age is ${age}.`);
+        }
+        printName('Aryan', 23);
+        printName('Shiv', 21);
+        printName('Karan');
+        printName(22);
+        console.log("------------------------------------")
+
+        //Q3 {create a func that gives us the average of 3 numbers}
+        function printAvg(a,b,c){
+            console.log((a+b+c)/3);
+        }
+        printAvg(2,4,6);
+        console.log("------------------------------------")
+
+        //Q4 {write a function to print the table}
+        function printTable(n){
+            for(let i=n; i<=n*10; i+=n){
+                console.log(i);
+            }
+        }
+        printTable(2);
+        console.log("-------------------OR-----------------")
+        function Table(n){
+            for(let i=1; i<=10; i++){
+                console.log(`${n} * ${i} = ${n*i}`);
+            }
+        }
+        Table(2);
+        console.log("------------------------------------")
+
+        ///Return Keyword
+        function sum(a,b){
+            return a+b;
+        }
+        console.log(sum(3,4));
+        console.log(sum(sum(1,2),3));
+        console.log("-------------pass in console in sum()--------------------")
+        
+        //Q5 create a func that returns the sum of numbers from 1 to n
+        function getSum(n){
+            let sum = 0;
+            for(let i=1; i<=n; i++){
+                sum += i;
+            }
+            return sum;
+        }
+        console.log("--------------pass in console in getSum()--------------------")
+
+        //Q6 create a func that return the concatenation of all strings in an array
+        let str = ['hi', 'hello', 'bye', '!'];
+        function concat(str){
+            let result = "";
+            for(i=0; i<str.length; i++){
+                result += str[i];
+            }
+            return result;
+        }
+        console.log("--------------pass in console in concat----------------------")
+
+        ///Function Scope & Global Scope
+        function calSum(a,b){
+            let sum = a+b;
+        }
+        calSum(1,2);        //error because sum is not defined inside 
+        console.log(sum);   //error
+        console.log("------------------------------------")
+
+        function calSum(a,b){
+            let sum = a+b;
+            console.log(sum);
+        }
+        calSum(1,2);        //now 3 bcz sum is defined inside function
+        console.log("------------------------------------")
+
+        let sum1 = 54;               //Global Scope
+        function calSum(a,b){
+            let sum1 = a+b;
+            console.log(sum1);       //Function Scope(Local)
+        }
+        calSum(1,5);          // 6
+        console.log(sum1);    // 54
+        console.log("------------------------------------")
+
+        ///Block Scope
+        // {
+        //     let a=25;
+        // }
+        // console.log(a);   //error a is not defined bcz here in block scope u cannot access outside {} this
+        for(let i=1; i<=5; i++){
+            console.log(i);     //will run o/p 12345
+        }
+        // console.log(i);     //error 
+        let age =25;
+        if(age>=18){
+            let str1 = 'adult';
+            console.log(str1);    // will run o/p adult
+        }
+        // console.log(str1);   //error
+        console.log("------------------------------------")
+
+        //Lexical Scope
+        function outerFunc(){
+            let x = 5;
+            let y = 6;
+            function innerFunc(){
+                console.log(x);
+                console.log(y);
+            }
+            innerFunc();
+        }
+        outerFunc();
+        console.log("------------------------------------")
+
+        //This is called HOISTING {will give the same output no chnges even if we write the var outside the func}
+        function outerFunc(){ 
+            function innerFunc(){
+                console.log(x);
+                console.log(y);
+            }
+            let x = 5;
+            let y = 6;
+
+            innerFunc();
+        }
+        outerFunc();
+        console.log("------------------------------------")
+
+        // function outerFunc(){
+        //     let x = 5;
+        //     let y = 6;
+        //     function innerFunc(){       //function scope
+        //         let a = 10;
+        //         console.log(x);
+        //         console.log(y);
+        //         //console.log(a);   //no error 5 6 10 will print
+        //     }
+        //     console.log(a);             //error accessing outside not possible
+        //     innerFunc();
+        // }
+        // outerFunc();
+        // console.log("------------------------------------")
+
+        //Q7 {what will be the output}
+        let greet = 'hello';            //Global Scope
+        function changeGreet(){
+            let greet = 'namaste';      //Function Scope
+            console.log(greet);
+            function innerGreet(){
+                console.log(greet);     //Lexical Scope
+            }
+        }
+        console.log(greet);           //output from global scope --> hello
+        changeGreet();                // changeGreet func called --> namaste
+        console.log("------------------------------------")
+
+        let greet1 = 'hello';            //Global Scope
+        function changeGreet1(){
+            let greet1 = 'namaste';      //Function Scope
+            console.log(greet1);
+            function innerGreet1(){  
+                console.log(greet1);     //Lexical Scope
+            }
+            innerGreet1();              //output from innerGreet call --> 3)namaste
+        }
+        console.log(greet1);           //output from global scope --> 1)hello
+        changeGreet1();                //changeGreet func called --> 2)namaste
+        console.log("------------------------------------")
+        
+        //Functions Expressions
+        let name1 = 'shreyash';
+        let c = 5;
+
+        let summ = function(a,b){
+            return a+b;
+        }
+        //summ(4,8);          //write in console will give the output.
+
+        let hello1 = function(){
+            console.log('hello');
+        }
+        hello1();
+        console.log("------------------------------------")
+
+        //High Order Functions  {dusre func ko as an argument le rha h}
+        let Greet = function(){
+            console.log('hello');
+        }
+        Greet();
+        Greet();
+        console.log("------------------------------------")
+
+        //to overcome this baar-baar call prblm
+        function multipleGreet(func, count){      //high-order func(dusre func ko as an arg le rha )
+            for(let i=1; i<=count; i++){
+                func();
+            }
+        }
+        let Greett = function(){
+            console.log('hello');
+        }
+        multipleGreet(Greett, 10);  //humesha func ki defn ko bhejna h calling ko nhi 
+        multipleGreet(function() {console.log('namaste')}, 2);
+        console.log("----------------multiple times--------------------")
+
+        //High Order Functions (Returns)   //Custom func made
+        function oddorEvenFactory(request){
+            if(request == 'odd')
+            {
+                let odd = function(n)
+                {
+                console.log(!(n%2 == 0));
+                }
+                return odd;
+            }
+            else if(request == 'even')
+            {
+                let even = function(n)
+                {
+                console.log((n%2 == 0));
+                }
+                return even;
+            }
+            else{
+                console.log('wrong request');
+            }
+        }
+        let request = 'odd';  // or even
+        let func = oddorEvenFactory(request);
+        //func(3)   //call in console 
+        console.log("--------------func()----------------------")
+
+    </script>
+</head>
+<body>
+    <h1>Functions</h1>
+</body>
+</html>
