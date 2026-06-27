@@ -258,7 +258,7 @@
         multipleGreet(function() {console.log('namaste')}, 2);
         console.log("----------------multiple times--------------------")
 
-        //High Order Functions (Returns)   //Custom func made
+        //High Order Functions (Returns) {returns a function  ;j}  //Custom func made
         function oddorEvenFactory(request){
             if(request == 'odd')
             {
@@ -284,6 +284,116 @@
         let func = oddorEvenFactory(request);
         //func(3)   //call in console 
         console.log("--------------func()----------------------")
+
+        // function oddorEvenFactory(request){
+        //     if(request == 'odd')
+        //     {
+        //         return function(n)
+        //         {
+        //         console.log(!(n%2 == 0));
+        //         }
+        //     }
+        //     else if(request == 'even')
+        //     {
+        //         return function(n)
+        //         {
+        //         console.log((n%2 == 0));
+        //         }
+        //     }
+        //     else{
+        //         console.log('wrong request');
+        //     }
+        // }
+        // let request = 'odd';  // or even
+        // let func = oddorEvenFactory(request);
+        console.log("---can be written like this also used return here directly instead of storing in variable---")
+
+        //Methods
+        const calculator ={
+            num : 55,
+            add : function(a,b){
+                return a+b;
+            },
+            sub : function(a,b){
+                return a-b;
+            },
+            mul : function(a,b){
+                return a*b;
+            }
+        };
+        console.log(calculator);
+        console.log(calculator.num);
+        console.log(calculator.add(1,5));
+        console.log(calculator.sub(1,5));
+        console.log(calculator.mul(1,5));
+        console.log("------------------------------------")
+
+        //Methods(shorthand)
+        const calcu ={
+            num : 75,
+            add (a,b){
+                return a+b;
+            },
+            sub (a,b){
+                return a-b;
+            },
+            mul (a,b){
+                return a*b;
+            }
+        };
+        console.log(calcu);
+        console.log(calcu.num);
+        console.log(calcu.add(1,5));
+        console.log("------------------------------------")
+
+        //Assignment Questions
+        //Q1 {Write a JS function that returns array elements larger than a number.}
+        let arr = [8,9,10,1,2,3,4,5,6,7];
+        let num = 5;
+        //elements larger than a number num
+        function getElements(arr, num){
+            for(let i=0; i<arr.length; i++){
+                if(arr[i] > num){
+                    console.log(arr[i]);
+                }
+            }
+        }
+        getElements(arr, num);
+        console.log("------------------------------------")
+
+        //Q2 {Write a JS function to extract unique characters from a string}
+        let strr = 'abcdabcdefgggh';
+        //function to get string with all unique characters
+        function getUnique(strr){
+            let ans = "";
+            for(let i=0; i<strr.length; i++){
+                let currChar = strr[i];
+                if(ans.indexOf(currChar) == -1){
+                    //if current char is not added then add it in ans 
+                    //otherwise it is a duplicate
+                    ans += currChar;
+                }
+            }
+            return ans;
+        }
+        console.log(getUnique(strr));
+        console.log("------------------------------------")
+
+        //Q3 {write a JS function that accepts a list of country names as input and returns the longest country name as output}
+        let country = ['Australia', 'Germany', 'United States of America'];
+        function longestName(country){
+            let ansIdx = 0;
+            for (let i=0; i<country.length; i++){
+                let ansLen = country[ansIdx].length;
+                let currLen = country[i].length;
+                if(currLen > ansLen){
+                    ansIdx = i;
+                }
+            }
+            return country[ansIdx];
+        }
+        console.log(longestName(country));
+        console.log("------------------------------------")
 
     </script>
 </head>
