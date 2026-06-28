@@ -154,7 +154,7 @@
         // console.log(str1);   //error
         console.log("------------------------------------")
 
-        //Lexical Scope
+        ///Lexical Scope
         function outerFunc(){
             let x = 5;
             let y = 6;
@@ -167,7 +167,7 @@
         outerFunc();
         console.log("------------------------------------")
 
-        //This is called HOISTING {will give the same output no chnges even if we write the var outside the func}
+        ///This is called HOISTING {will give the same output no chnges even if we write the var outside the func}
         function outerFunc(){ 
             function innerFunc(){
                 console.log(x);
@@ -222,7 +222,7 @@
         changeGreet1();                //changeGreet func called --> 2)namaste
         console.log("------------------------------------")
         
-        //Functions Expressions
+        ///Functions Expressions
         let name1 = 'shreyash';
         let c = 5;
 
@@ -237,7 +237,7 @@
         hello1();
         console.log("------------------------------------")
 
-        //High Order Functions  {dusre func ko as an argument le rha h}
+        ///High Order Functions  {dusre func ko as an argument le rha h}
         let Greet = function(){
             console.log('hello');
         }
@@ -258,7 +258,7 @@
         multipleGreet(function() {console.log('namaste')}, 2);
         console.log("----------------multiple times--------------------")
 
-        //High Order Functions (Returns) {returns a function  ;j}  //Custom func made
+        ///High Order Functions (Returns) {returns a function  ;j}  //Custom func made
         function oddorEvenFactory(request){
             if(request == 'odd')
             {
@@ -308,7 +308,7 @@
         // let func = oddorEvenFactory(request);
         console.log("---can be written like this also used return here directly instead of storing in variable---")
 
-        //Methods
+        ///Methods
         const calculator ={
             num : 55,
             add : function(a,b){
@@ -328,7 +328,7 @@
         console.log(calculator.mul(1,5));
         console.log("------------------------------------")
 
-        //Methods(shorthand)
+        ///Methods(shorthand)
         const calcu ={
             num : 75,
             add (a,b){
@@ -346,7 +346,7 @@
         console.log(calcu.add(1,5));
         console.log("------------------------------------")
 
-        //Assignment Questions
+        ///Assignment Questions
         //Q1 {Write a JS function that returns array elements larger than a number.}
         let arr = [8,9,10,1,2,3,4,5,6,7];
         let num = 5;
@@ -393,6 +393,36 @@
             return country[ansIdx];
         }
         console.log(longestName(country));
+        console.log("------------------------------------")
+
+        //Q4 {write a JS function to count the number of vowels in a string argument}
+        let str2 = 'apnaCollege';
+        function countVowels(str2){
+            let count = 0;
+            for(let i=0; i<str2.length; i++){
+                if(
+                    str2.charAt(i) == 'a' ||
+                    str2.charAt(i) == 'e' ||
+                    str2.charAt(i) == 'i' ||
+                    str2.charAt(i) == 'o' ||
+                    str2.charAt(i) == 'u' 
+                ) {
+                    count++;
+                }   
+            }
+            return count;
+        }
+        console.log(countVowels(str2));
+        console.log("------------------------------------")
+
+        //Q5 {write a JS function to generate a random number within a range(start, end)}
+        let start = 100;
+        let end = 200;
+        function generateRandom(start, end){
+            let diff = end - start;
+            return Math.floor(Math.random() * diff) + start;
+        }
+        console.log(generateRandom(start, end));
         console.log("------------------------------------")
 
     </script>
