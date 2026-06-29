@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        ///this Keyword
+        // const student = {
+        //     name: 'jiya',
+        //     age: 24,
+        //     eng: 94,
+        //     maths: 92,
+        //     comp: 93,
+        //     getAvg(){
+        //         let avg = (eng + maths + comp) / 3;
+        //         console.log(avg);
+        //     }
+        // }
+        // student.getAvg();           //will give error say eng is not defined
+
+        ///to overcome this we used {this keyword}
+        const student = {
+            name: 'jiya',
+            age: 24,
+            eng: 94,
+            maths: 92,
+            comp: 93,
+            getAvg(){
+                console.log(this);
+                let avg = (this.eng + this.maths + this.comp) / 3;
+                console.log(`${this.name} got avg marks = ${avg}`);
+            }
+        };
+        student.getAvg();  
+
+        function getAvg(){
+            console.log(this);
+        }
+        getAvg();
+        console.log("------------------------------------")
+        
+        ///Try and Catch Block
+        console.log("hello");
+        console.log("hello");
+        //let a =5;  //koi error throw hi nhi hua idhr to catch bhi nhi hua kuch to simply execute hogya
+        try{                     //try --> jis code pr shak ho 
+            console.log(a);
+        } catch(e){
+            console.log("caught an error...a is not defined");       //catch --> jo shak h ki esa ho skta h
+            console.log(e)
+        }
+       
+        console.log("hello");
+        console.log("hello");
+        console.log("------------------------------------")
+        //try..throws an error and catch..catches if there is some error 
+
+        ///Miscellaneous Topics in JS
+        //1) Arrow Function
+        const sum = (a,b) => {
+            console.log(a+b);
+        }
+        sum(2,3);
+        sum;
+
+        const cube = (n) => {    //we can also skip () when single argu is present
+            return(n*n*n);
+        }
+        console.log(cube(2));
+
+        const pow = (a,b) =>{
+            console.log(a**b);
+        }
+        pow(2,4);
+
+        const hello = () => {    //if argu not there still use() otherwise error
+            console.log("hello world!")
+        }
+        hello();
+        console.log("------------------------------------")
+
+        //2) Arrow Function Implicit Return(automatic return already understood)
+        const mul = (a,b) => (a*b);   //call in console --> mul()
+        const div = (a,b) => (a/b);   
+
+        //3) set Timeout
+        console.log("Hi there!");
+
+        setTimeout( () => {
+            console.log("Apna College");
+        } ,4000)
+        
+        console.log("Welcome to");
+        
+        //4) set Interval
+        // setInterval( () => {
+        //     console.log("Apna College");   // will run infinitely
+        // } ,2000)
+
+        //to overcome this
+        let id = setInterval( () => {
+            console.log("hello siri");   // will run infinitely
+        } ,2000)
+        console.log(id);
+
+        let id2 = setInterval( () => {
+            console.log("hello alexa");   // will run infinitely
+        } ,3000)
+        console.log(id2);
+
+        clearInterval(id);              //to clear
+        clearInterval(id2);
+        console.log("------------------------------------")
+        
+    </script>
+</head>
+<body>
+    <h1>Keywords, statements and Miscellaneous functions</h1>
+</body>
+</html>
