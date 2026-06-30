@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        ///this Keyword
+        // const student = {
+        //     name: 'jiya',
+        //     age: 24,
+        //     eng: 94,
+        //     maths: 92,
+        //     comp: 93,
+        //     getAvg(){
+        //         let avg = (eng + maths + comp) / 3;
+        //         console.log(avg);
+        //     }
+        // }
+        // student.getAvg();           //will give error say eng is not defined
+
+        ///to overcome this we used {this keyword}
+        const student = {
+            name: 'jiya',
+            age: 24,
+            eng: 94,
+            maths: 92,
+            comp: 93,
+            getAvg(){
+                console.log(this);
+                let avg = (this.eng + this.maths + this.comp) / 3;
+                console.log(`${this.name} got avg marks = ${avg}`);
+            }
+        };
+        student.getAvg();  
+
+        function getAvg(){
+            console.log(this);
+        }
+        getAvg();
+        console.log("------------------------------------")
+        
+        ///Try and Catch Block
+        console.log("hello");
+        console.log("hello");
+        //let a =5;  //koi error throw hi nhi hua idhr to catch bhi nhi hua kuch to simply execute hogya
+        try{                     //try --> jis code pr shak ho 
+            console.log(a);
+        } catch(e){
+            console.log("caught an error...a is not defined");       //catch --> jo shak h ki esa ho skta h
+            console.log(e)
+        }
+       
+        console.log("hello");
+        console.log("hello");
+        console.log("------------------------------------")
+        //try..throws an error and catch..catches if there is some error 
+
+        ///Miscellaneous Topics in JS
+        //1) Arrow Function
+        const sum = (a,b) => {
+            console.log(a+b);
+        }
+        sum(2,3);
+        sum;
+
+        const cube = (n) => {    //we can also skip () when single argu is present
+            return(n*n*n);
+        }
+        console.log(cube(2));
+
+        const pow = (a,b) =>{
+            console.log(a**b);
+        }
+        pow(2,4);
+
+        const hello = () => {    //if argu not there still use() otherwise error
+            console.log("hello world!")
+        }
+        hello();
+        console.log("------------------------------------")
+
+        //2) Arrow Function Implicit Return(automatic return already understood)
+        const mul = (a,b) => (a*b);   //call in console --> mul()
+        const div = (a,b) => (a/b);   
+
+        //3) set Timeout
+        // console.log("Hi there!");
+
+        // setTimeout( () => {
+        //     console.log("Apna College");
+        // } ,4000)
+        
+        // console.log("Welcome to");
+        
+        //4) set Interval
+        // setInterval( () => {
+        //     console.log("Apna College");   // will run infinitely
+        // } ,2000)
+
+        //to overcome this
+        let id1 = setInterval( () => {
+            console.log("hello siri");   // will run infinitely
+        } ,2000)
+        console.log(id1);
+
+        let id2 = setInterval( () => {
+            console.log("hello alexa");   // will run infinitely
+        } ,3000)
+        console.log(id2);
+
+        clearInterval(id1);              //to clear
+        clearInterval(id2);
+        console.log("------------------------------------")
+
+        //this with arrow function
+        const stud = {
+            name: 'avi',
+            marks: 97,
+            prop: this
+        };
+        //stud & stud.prop(will give window func)--> in console      
+
+        const stud1 = {             //global scope
+            name: 'avi',
+            marks: 97,
+            prop: this,             //global scope
+            getName: function () {      //normal function
+                console.log(this);      //depends on calling obj 
+                return this.name;
+            },
+            getMarks: () => {           //arrow function
+                console.log(this);      //Lexical (parent) scope inherit krta -->window
+                return this.marks;
+            },
+            getInfo1: function() {
+                setTimeout ( () => {
+                    console.log(this);      //student
+                }, 2000);
+            },
+            getInfo2: function() {
+                setTimeout ( function() {
+                    console.log(this);      //student
+                }, 2000);
+            }
+        };
+        //stud1.getName(); & stud1.getMarks();
+
+        //Practice Qs
+        //Q1 {write an arrow function that returns the square of a number 'n'}
+        const square = (n) => {
+            return(n*n);
+        };
+        console.log(square(8));
+        console.log("-------------OR-----------------------")
+
+        const sqr = (n) => (n*n);
+        console.log(sqr(5));
+        console.log("------------------------------------")
+
+        //Q2 {write a function that prints "hello World" at an interval of 2s each}
+        // let id3 = setInterval( () => {
+        //     console.log("Hello World");
+        // } ,2000);
+        // setTimeout(() => {
+        //     clearInterval(id3);
+        //     console.log("clear interval ran")
+        // }, 10000);
+        console.log("------------------------------------")
+
+        //Assignment Questions
+        //Q1 {write an arrow func named arrayAvg that accepts an array of numbers & returns avg of those numbers}
+        let arr = [1,2,3,4,5,6];
+        const arrayAvg = (arr) => {
+            let total = 0;
+            for(let number of arr){
+                total += number
+            }
+            return total / arr.length;
+        }
+        console.log(arrayAvg(arr));         //output - 3.5 
+        console.log("------------------------------------")
+
+        //Q2 {Write an arrow func named isEven() that takes a single number as argument and returns if it is even or not}
+        const isEven = (n) => (n%2 == 0);
+        console.log(isEven(8));
+        console.log("------------------------------------")
+
+        //Q3 {what is the output of the following code}
+        const object = {
+            message: 'Hello World!',
+
+            logMessage() {
+                console.log(this.message);
+            }
+        };
+        setTimeout(object.logMessage,1000);     //undefined
+        console.log("------------------------------------")
+
+        //Q4 {what is output of the following code}
+        const object1 = {
+            msg: 'Hello World!',
+            getMsg() {
+                const msg = 'Hello Earth';
+                return this.msg
+            }
+        };
+        console.log(object1.getMsg());      //hello world
+        console.log("------------------------------------")
+    
+    </script>
+</head>
+<body>
+    <h1>Keywords, statements and Miscellaneous functions</h1>
+</body>
+</html>
