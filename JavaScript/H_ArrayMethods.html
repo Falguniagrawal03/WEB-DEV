@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
 
+        //Array Methods
+        //1) forEach {executes code for each element without returning anything}
+        // let arr = [1,2,3,4,5];
+        // let print = function(ele){
+        //     console.log(ele);
+        // };
+        // arr.forEach(print);
+        let arr = [1,2,3,4,5];
+        arr.forEach(function(ele){
+            console.log(ele);
+        });
+        console.log('-------------Normal func-----------------');
+
+        let arr1 = [1,2,3,4,5];
+        arr1.forEach( (el) => {
+            console.log(el);
+        });
+        console.log('-------------Arrow func-----------------');
+
+        let arr2 = [ 
+            {
+                name: 'avya',
+                marks: 97
+            }, 
+            {
+                name: 'rajat',
+                marks: 94
+            }, 
+            {
+                name: 'shruti',
+                marks: 92
+            },
+           ];
+        arr2.forEach((student) => {
+            console.log(student);
+            console.log(student.name);
+        });
+        console.log('--------------forEach------------------')
+
+        //2) map {transforms each element & returns a brand new array of the same length}
+        let num = [1,2,3,4];
+        let double = num.map( (el) => {
+            return el*2;
+        });
+        console.log(double);
+        console.log('-------------Map-------------------')
+
+        let students = [ 
+            {
+                name: 'aman',
+                marks: 97
+            }, 
+            {
+                name: 'ram',
+                marks: 94
+            }, 
+            {
+                name: 'sneha',
+                marks: 92
+            },
+        ];
+        let gpa = students.map( (el) => {
+            return el.marks / 10;
+        });
+        console.log(gpa);
+        console.log('-----------------Map------------------')
+
+        //3) filter {filter retruns a new array containing only the elements that meet a specific condition}
+        let nums = [1,2,3,5,7,4,6,9,8,10,12,11];
+        let ans = nums.filter( (el) => {
+            return el%2 == 0 ;  //even -> true, off -> false
+            //return el%2 !=0;  // return el<5;
+        });
+        console.log(ans);
+        console.log('--------------filter------------------')
+
+        //4) every {true or false..checking if all items pass a condition}
+        let n1 = [1,2,3,4];
+        let ans1 = n1.every( (el) => (el%2 == 0));  //all should be true{like AND}
+        console.log(ans1);
+        console.log('------------every---------------------')
+
+        //5) some {true or false..checking if atleast one item passes a condition}
+        let n2 = [1,2,3,4];
+        let ans2 = n2.some( (el) => (el%2==0));     //atleast one should be true{like OR} 
+        console.log(ans2);
+        console.log('-------------some---------------------')
+
+        //6) reduce {a single accumulated value..combining elements into one final result}
+        let n3 = [1,2,3,4];
+        let finalVal = n3.reduce( (res,el) => {
+            // console.log(res);
+            return res+el;
+        });
+        console.log(finalVal);
+        console.log('------------reduce---------------------')
+
+        //Finding maximum in array
+        //With Loop
+        let array = [1,2,4,7,3,5,8,6,9,2];
+        let max = -1;    //or 0
+        for(let i=0; i<array.length; i++){
+            if(max < array[i]){
+                max = array[i];
+            }
+        }   
+        console.log(max);
+        console.log('--------------------------------')
+        //With Reduce
+        let array1 = [1,2,4,7,3,5,8,6,9,2,11];
+        let maxResult = array1.reduce( (max, el) => {
+            if(max < el){
+                return el;
+            }
+            else{
+                return max;
+            }
+        });
+        console.log(maxResult);
+        console.log('---------------------------------')
+
+        //Practice Qs
+        //Q1 {check if all the num in an array are multiples of 10 or not}
+        let num1 = [10,20,30,40];
+        let res1 = num1.every( (el) => (el%10==0));
+        console.log(res1);
+        console.log('---------------------------------')
+
+        //Q2 {create a function to find the min number in an array}
+        let num2 = [2,5,3,7,9,1,6,8];
+        let minResult = num2.reduce( (min, el) => {
+            if(min < el){
+                return min;
+            }
+            else{
+                return el;
+            }
+        });
+        console.log(minResult);
+        console.log('---------------------------------')
+
+        //as a function
+        function getMin(num2) {
+            let minResult = num2.reduce( (min, el) => {
+            if(min < el){
+                return min;
+            }
+            else{
+                return el;
+            }
+        });
+            return minResult;
+        }
+        console.log(getMin(num2));
+        console.log('---------------------------------')
+        
+    </script>
+</head>
+<body>
+    <h1>Array methods</h1>
+</body>
+</html>
