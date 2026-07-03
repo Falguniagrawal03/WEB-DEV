@@ -161,7 +161,96 @@
         }
         console.log(getMin(num2));
         console.log('---------------------------------')
-        
+
+        //default parameters
+        function sum(a, b=3){
+            return a+b;
+        }
+        console.log(sum(2));
+        console.log('--------------Default Parameters-------------------')
+
+        //Spread(...) {expands an iterable into multiple values}
+        console.log(...'apnacollege');
+        let a = [1,2,3,4,5,6];
+        console.log(...a);
+        console.log('-------------SPREAD--------------------')
+
+        //Spread with Array Literals
+        let arrr = [1,2,3,4,5];
+        let newArr = [...arrr];
+        console.log(newArr);
+
+        let chars = [...'hello'];
+        console.log(chars);
+
+        let odd = [1,3,5,7,9];
+        let even = [2,4,6,8,10];
+        let numss = [...odd, ...even];      //order matters
+        console.log(numss);
+        console.log('--------------SPREAD with Array literals-------------------')
+
+        //Spread with Object Literals
+        let data = {
+            email : 'ironman@gmail.com' ,
+            pswd : 'abcd',
+        };
+        let dataCopy = {...data, id: 123, country: 'India'};
+        console.log(dataCopy);
+        console.log('---------------------------------')
+
+        //array and str can also be stored in obj and spread
+        let ar = [1,2,3,4,5,6];   //needs only value
+        let obj1 = {...ar};       //needs key:value pair so will give index place n value
+        let obj2 = {...'hello'};    //this is str obj same will give index as key
+        console.log(obj1);
+        console.log(obj2);
+        console.log('---------------SPREAD with Obj literals------------------')
+
+        //Rest {reduce from multiple to single value opp. of spread}
+        function sum(...args){
+            for(let i=0; i<args.length; i++){
+                console.log('you gave us:', args[i]);
+            }
+        }
+        sum(2,3);
+        console.log('--------------REST-------------------')
+
+        function min(a,b,c,d){
+            console.log(arguments);  //will run
+        }
+        min(1,2,3,4);
+
+        function min(){
+            console.log(arguments);  //this will also run when no argu are passed 
+            console.log(arguments.length);
+        }
+        min(1,2);
+        console.log('---------------------------------')
+
+        // function sum(){
+        //     return arguments.reduce((add,el) => add+el);    //Error bcz arguments.reduce is not a function
+        // }
+
+        function summ(...args){
+             return args.reduce((add,el) => add+el);    //no error
+        }
+        console.log(summ(5,7));
+        console.log('---------------------------------')
+
+        function minn(msg, ...args){
+            console.log(msg);
+            return args.reduce((min,el) => {
+                if(min < el){
+                    return min;
+                }
+                else{
+                    return el;
+                }
+            });
+        }
+        console.log(minn('hello',38,96,400));
+        console.log('---------------REST------------------')
+
     </script>
 </head>
 <body>
