@@ -251,9 +251,67 @@
         console.log(minn('hello',38,96,400));
         console.log('---------------REST------------------')
 
+        //Destructuring {storing values of arrays into multiple variables} arrays[]
+        let names = ['Tony', 'Bruce', 'Steve', 'Peter', 'abc', 'xyz'];
+        // let winner = names[0];
+        // let runnerup = names[1];
+        let [winner, runnerup, ...others] = names;
+        console.log(winner, runnerup, others);  //'Tony' 'Bruce' (3)[steve peter abc xyz]
+        console.log('---------------REST------------------')
+
+        //Destructuring with Objects{}
+        const stud = {
+            name: 'karan',
+            age: 15,
+            class: '10th',
+            subjects: ['eng', 'hindi', 'math', 'sci'],
+            username: 'karan@123',
+            password : 'abcd'
+        };
+        // let username = stud.username;
+        // let password = stud.password;
+        let {username, password} = stud;
+        console.log(username, password);
+        // let {username : user, password: secret, city: place = 'mumbai'} = stud; 
+        //here password and username is not defined so it will take the values as assigned user and secret as defined and give the info.
+        console.log('---------------DESTRUCTURING ------------------')
+
+        //Assignment Questions
+        //Q1 {sqr and sum array elements using arrow func then find the avg of the arr}
+        let b = [1,2,3,4,5];
+        let sqr = b.map((el) => el*el);
+        console.log(sqr);
+        let sum1 = b.reduce((acc, cur) => acc+cur);
+        console.log(sum1);
+        let avg1 = sum1 / b.length;
+        console.log(avg1);
+        console.log('------------------------------------------')
+
+        //Q2 {create a new array using map func whose each element is equal to the original element plus 5}
+        c = [2,4,6,3,-2,-7];
+        let newArray = c.map((el) => el+5);
+        console.log(newArray);
+        console.log('------------------------------------------')
+
+        //Q3 {create a new array whose element are in uppercase of words present in the original array}
+        let strings = ["adam", "bob", "catlyn", "donald", "eve"];
+        console.log(strings.map((el) => el.toUpperCase()));
+        console.log('------------------------------------------')
+
+        //Q4 {Write a func called doubleAndReturnArgs which accepts an array and a variable number of arguments. The function should return a new array with the original array values and all of the additional arguments doubled}
+        const doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map((v) => v*2),];
+        console.log(doubleAndReturnArgs ([1,2,3],4,4));     //[1,2,3,8,8]
+        console.log(doubleAndReturnArgs ([2],10,-4));      //[2,20,16]
+        console.log('------------------------------------------')
+
+        //Q5 {Write a func called mergeObjects that accepts two objects and returns a new object which contains all the keys and values of the first object and second object}
+        const mergeObjects = (object1, object2) => ({...object1, ...object2});
+        console.log(mergeObjects({a:1, b:2}, {c:3, d:4})); 
+        console.log('------------------------------------------')
+        
     </script>
 </head>
 <body>
-    <h1>Array methods</h1>
+    <h1>Array methods, Default Parameters, Spread, Rest, Destructuring</h1>
 </body>
 </html>
