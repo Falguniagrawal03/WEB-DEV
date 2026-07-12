@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
     <!-- inline DOM event -->
@@ -13,6 +21,27 @@
     <button>Click Me!</button>
     <button>Click Me!</button>
     <button>Click Me!</button>
+    
+    <!-- Event Listeners for Elements -->
+    <p>This is a Paragraph</p>
+    <div class="box"></div>
+
+    <!-- this -->
+    <h1>Use of 'this' in Event Listeners</h1>
+    <h3>Lets demo it!</h3>
+    <h5>Can use 'this for multiple callback obj to execute with a single func, while writing concisely</h5>
+
+    <!-- Keyboard events -->
+    <input placeholder="Type Something">
+    <br></br>
+    
+    <!-- Form Events -->
+    <form action="/action">
+        <input placeholder="username" type="text" id="user">
+        <input placeholder="password" type="password" id="pswd">
+        <button>Register</button>
+    </form>
+ 
     <script src="10_DOMevents.js"></script>
 </body>
 </html>
