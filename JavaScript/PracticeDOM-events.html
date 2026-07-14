@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-10</title>
+</head>
+<body>
+    <input placeholder="type something">
+    <br></br>
+
+    <button>Press me!</button>
+    <br></br>
+
+    <h2></h2>
+    <input placeholder="Enter your name" id="user">
+
+
+    <script>
+        //Q1
+        let inp = document.querySelector('input');
+        //mouseleft
+        inp.addEventListener('mouseout', function(e){
+            console.log('mouse left the page');
+        });
+        //keypress
+        inp.addEventListener('keypress', function(e){
+            console.log('Key Pressed');
+        });
+        //scroll
+        window.addEventListener('scroll', function(e){
+            console.log('page scrolled');
+        });
+        //load
+        window.addEventListener('load', function(e){
+            console.log('page loaded successfully');
+        });
+
+        //Q2
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function(){
+            btn.style.backgroundColor = 'green';
+        });
+
+        //Q3
+        let user = document.querySelector('#user');
+        let heading2 = document.querySelector('h2');
+        user.addEventListener('input', function(){
+        let filter = user.value.replace(/[^a-zA-Z]/g, "");
+        heading2.innerText = filter;
+        });
+
+    </script>
+</body>
+</html>
