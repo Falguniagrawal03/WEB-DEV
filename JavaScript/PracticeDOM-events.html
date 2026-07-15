@@ -45,6 +45,7 @@
         //Q3
         let user = document.querySelector('#user');
         let heading2 = document.querySelector('h2');
+        
         user.addEventListener('input', function(){
         let filter = user.value.replace(/[^a-zA-Z]/g, "");
         heading2.innerText = filter;
