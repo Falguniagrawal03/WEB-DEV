@@ -24,14 +24,3 @@ ul.addEventListener('click', function(e){
         console.log('delete');      //now new item can be added and deleted both easily
     }
 });
-
-
-//1)this logic here will not work for newly added tasks to overcfome this we use event delegation with event bubbling
-// let delBtns = document.querySelectorAll('.delete');     
-// for(delbtn of delBtns){
-//     delbtn.addEventListener('click', function(){
-//         let prnt = this.parentElement;
-//         console.log(prnt);
-//         prnt.remove();
-//     });
-// }
