@@ -21,13 +21,16 @@ body{
 .green{
     background-color: aquamarine;
 }
-.blue{
+.yellow{
     background-color: burlywood;
 }
 .purple{
-    background-color: rgb(206, 43, 206);
+    background-color: purple;
 }
 
 .flash{
     background-color: white;
+}
+.userflash{
+    background-color: green;
 }
